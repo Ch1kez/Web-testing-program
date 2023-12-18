@@ -1,0 +1,99 @@
+{
+  "tst_info": {
+    "tsts": "СЭП 240",
+    "tadr": "http://10.17.10.31:8080/pts/login",
+    "dbg": true,
+    "headless": false,
+    "var_arr": {},
+    "cur_step": 0,
+    "drv": null,
+    "prx": null,
+    "log_arr": {},
+    "log_ajax": {}
+  },
+  "tst_arr": [
+    {
+      "get": "/pts/login",
+      "rem": "Получение выписки через АРМ"
+    },
+    {
+      "val": "//input[@name='username']",
+      "rem": "Логин/E-mail",
+      "cmd": "snd",
+      "fnd": "xpath",
+      "key": "@@@user@@@login@@@ПЕП@@@"
+    },
+    {
+      "val": "//input[@name='password']",
+      "rem": "Пароль",
+      "cmd": "snd",
+      "fnd": "xpath",
+      "key": "@@@user@@@password@@@ПЕП@@@"
+    },
+    {
+      "val": "//input[@name='login']",
+      "rem": "Войти",
+      "fnd": "xpath"
+    },
+    {
+      "val": "",
+      "rem": "Создание ЭПТС для теста",
+      "cmd": "save",
+      "fnd": "@СоздатьПТС",
+      "key": "@@@ЭПТС@@@crpts@@@qtype=FOwnPEP&vmask=MZDGJ52Y8@@@"
+    },
+    {
+      "val": "//a[@aria-controls='submenu-registry']",
+      "rem": "Реестры",
+      "fnd": "xpath"
+    },
+    {
+      "val": "//span[text() = 'Реестр электронных паспортов']",
+      "rem": "Реестр электронных паспортов",
+      "fnd": "xpath"
+    },
+    {
+      "val": "//input[contains(@name, 'passportNumber')]",
+      "rem": "Номер электронного паспорта",
+      "cmd": "snd",
+      "fnd": "xpath",
+      "key": "@@@var@@@crpts_epts@@@"
+    },
+    {
+      "val": "//button[@name='search']",
+      "rem": "Искать",
+      "fnd": "xpath"
+    },
+    {
+      "val": "//tbody[@wicketpath=\"results_body\"]//following-sibling::input",
+      "rem": "Выделить паспорт галочкой",
+      "fnd": "xpath"
+    },
+    {
+      "val": "//div[@class=\"search-toolbar\"]//button",
+      "rem": "Выбор действия",
+      "idx": 0,
+      "fnd": "xpath"
+    },
+    {
+      "val": "//div[@class=\"search-toolbar\"]//button[contains(text(), 'Выписка')]",
+      "rem": "Выписка",
+      "fnd": "xpath"
+    },
+    {
+      "val": "//button[@name='confirm']",
+      "rem": "Подтвердить",
+      "fnd": "xpath"
+    },
+    {
+      "val": "//input[@value='Закрыть']",
+      "rem": "Закрыть",
+      "fnd": "xpath"
+    },
+    {
+      "val": "//button[contains(text(), 'Скачать выписку')]",
+      "rem": "Скачать выписку",
+      "fnd": "xpath"
+    }
+  ]
+}

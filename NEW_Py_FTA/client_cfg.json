@@ -1,0 +1,9 @@
+{
+  "drv_path" : "c:/chromedriver/chromedriver.exe",
+  "plugins" :
+  [
+    "c:/chromedriver/1.2.8_0.crx",
+    "c:/chromedriver/1.1_0.crx"
+  ],
+  "bmp_path" : "d:/Ivanov/browsermob-proxy-2.1.4/bin/browsermob-proxy"
+}

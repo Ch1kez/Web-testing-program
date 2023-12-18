@@ -1,0 +1,26 @@
+{
+  "t_info": {
+    "tsts": "\u0421\u042d\u041f 240",
+    "tadr": "http://10.17.10.31:8080/pts/login",
+    "tst_par": {
+      "tsts": "\u0421\u042d\u041f 240",
+      "dbg": false,
+      "tadr": "http://192.168.135.240:8080"
+    },
+    "dbg": true,
+    "headless": false,
+    "var_arr": {},
+    "cur_step": 0,
+    "cur_cmd": "",
+    "drv": null,
+    "prx": null,
+    "log_arr": {},
+    "log_ajax": {}
+  },
+  "tst_arr": {
+    "id": 165,
+    "test_name": "165. \u041f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u0435 \u0432\u044b\u043f\u0438\u0441\u043a\u0438 \u0447\u0435\u0440\u0435\u0437 \u0410\u0420\u041c",
+    "test_text": "[\n\t{\"get\":\"\\/pts\\/login\",\"rem\":\"\u041f\u043e\u043b\u0443\u0447\u0435\u043d\u0438\u0435 \u0432\u044b\u043f\u0438\u0441\u043a\u0438 \u0447\u0435\u0440\u0435\u0437 \u0410\u0420\u041c\"},\n\t{\"val\":\"\\/\\/input[@name='username']\",\"rem\":\"\u041b\u043e\u0433\u0438\u043d\\/E-mail\",\"cmd\":\"snd\",\"fnd\":\"xpath\",\"key\":\"@@@user@@@login@@@\u041f\u0415\u041f@@@\"},\n\t{\"val\":\"\\/\\/input[@name='password']\",\"rem\":\"\u041f\u0430\u0440\u043e\u043b\u044c\",\"cmd\":\"snd\",\"fnd\":\"xpath\",\"key\":\"@@@user@@@password@@@\u041f\u0415\u041f@@@\"},\n\t{\"val\":\"\\/\\/input[@name='login']\",\"rem\":\"\u0412\u043e\u0439\u0442\u0438\",\"fnd\":\"xpath\"},\n\t{\"val\":\"\",\"rem\":\"\u0421\u043e\u0437\u0434\u0430\u043d\u0438\u0435 \u042d\u041f\u0422\u0421 \u0434\u043b\u044f \u0442\u0435\u0441\u0442\u0430\",\"cmd\":\"save\",\"fnd\":\"@\u0421\u043e\u0437\u0434\u0430\u0442\u044c\u041f\u0422\u0421\",\"key\":\"@@@\u042d\u041f\u0422\u0421@@@crpts@@@qtype=FOwnPEP&vmask=MZDGJ52Y8@@@\"},\n\t{\"val\":\"\\/\\/a[@aria-controls='submenu-registry']\",\"rem\":\"\u0420\u0435\u0435\u0441\u0442\u0440\u044b\",\"fnd\":\"xpath\"},\n\t{\"val\":\"\\/\\/span[text() = '\u0420\u0435\u0435\u0441\u0442\u0440 \u044d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u044b\u0445 \u043f\u0430\u0441\u043f\u043e\u0440\u0442\u043e\u0432']\",\"rem\":\"\u0420\u0435\u0435\u0441\u0442\u0440 \u044d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u044b\u0445 \u043f\u0430\u0441\u043f\u043e\u0440\u0442\u043e\u0432\",\"fnd\":\"xpath\"},\n\t{\"val\":\"\\/\\/input[contains(@name, 'passportNumber')]\",\"rem\":\"\u041d\u043e\u043c\u0435\u0440 \u044d\u043b\u0435\u043a\u0442\u0440\u043e\u043d\u043d\u043e\u0433\u043e \u043f\u0430\u0441\u043f\u043e\u0440\u0442\u0430\",\"cmd\":\"snd\",\"fnd\":\"xpath\",\"key\":\"@@@var@@@crpts_epts@@@\"},\n\t{\"val\":\"\\/\\/button[@name='search']\",\"rem\":\"\u0418\u0441\u043a\u0430\u0442\u044c\",\"fnd\":\"xpath\"},\n\t{\"val\":\"\\/\\/tbody[@wicketpath=\\\"results_body\\\"]\\/\\/following-sibling::input\",\"rem\":\"\u0412\u044b\u0434\u0435\u043b\u0438\u0442\u044c \u043f\u0430\u0441\u043f\u043e\u0440\u0442 \u0433\u0430\u043b\u043e\u0447\u043a\u043e\u0439\",\"fnd\":\"xpath\"},\n\t{\"val\":\"\\/\\/div[@class=\\\"search-toolbar\\\"]\\/\\/button\",\"rem\":\"\u0412\u044b\u0431\u043e\u0440 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u044f\",\"idx\":0,\"fnd\":\"xpath\"},\n\t{\"val\":\"\\/\\/div[@class=\\\"search-toolbar\\\"]\\/\\/button[contains(text(), '\u0412\u044b\u043f\u0438\u0441\u043a\u0430')]\",\"rem\":\"\u0412\u044b\u043f\u0438\u0441\u043a\u0430\",\"fnd\":\"xpath\"},\n\t{\"val\":\"\\/\\/button[@name='confirm']\",\"rem\":\"\u041f\u043e\u0434\u0442\u0432\u0435\u0440\u0434\u0438\u0442\u044c\",\"fnd\":\"xpath\"},\n\t{\"val\":\"\\/\\/input[@value='\u0417\u0430\u043a\u0440\u044b\u0442\u044c']\",\"rem\":\"\u0417\u0430\u043a\u0440\u044b\u0442\u044c\",\"fnd\":\"xpath\"},\n\t{\"val\":\"\\/\\/button[contains(text(), '\u0421\u043a\u0430\u0447\u0430\u0442\u044c \u0432\u044b\u043f\u0438\u0441\u043a\u0443')]\",\"rem\":\"\u0421\u043a\u0430\u0447\u0430\u0442\u044c \u0432\u044b\u043f\u0438\u0441\u043a\u0443\",\"fnd\":\"xpath\"}\n]",
+    "test_grp": "\u0410\u0420\u041c;\u0422\u0421 / \u0448\u0430\u0441\u0441\u0438;1212;"
+  }
+}
