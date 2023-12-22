@@ -12,7 +12,7 @@ drv_path = r'c:\chromedriver\chromedriver.exe'
 
 def tst_execute(tst_num, trg, save_log):
     response = requests.get('http://127.0.0.1:8000/custom-response/',
-                            params={'tst_num': '165', 'trg': '240', 'save_log': 'True'})
+                            params={'tst_num': 'testes_classes', 'trg': '240', 'save_log': 'True'})
 
     print(response)
     response['t_info']['tst_par']["drv_path"] = drv_path

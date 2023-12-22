@@ -75,7 +75,7 @@ def request_to_db( tst_num, trg, save_log):
 
 
 if __name__ == '__main__':
-    # tst_num, trg, save_log = 165, '240', True
+    # tst_num, trg, save_log = testes_classes, '240', True
 
     request = request_to_db(tst_num=165, trg='240', save_log=True)
     print(json.dumps(request))

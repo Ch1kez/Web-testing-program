@@ -1,5 +1,4 @@
-from re import sub
-from socket import gethostname
+
 
 from django.shortcuts import render
 from rest_framework import generics
@@ -50,33 +49,6 @@ def custom_response(request):
     except Test.DoesNotExist as ex:
         return Response({"error": f"Test does not exist{ex}"}, status=status.HTTP_404_NOT_FOUND)
 
-
-def tfa_dbg():
-    return gethostname() == 'sts-tf_tfa'
-
-
-def get_par_test(t_array, trgp, serializer_test):
-    retv = {'tsts': 'СЭП ' + trgp, 'dbg': tfa_dbg()}
-    tst_start = ''
-    eotts_macros = ["@ЗакрЭОТТС", "@ИнфЭОТТС", "@ПоискЭОТТС", "@РазворотЭОТТС", "@СвязиЭОТТС",
-                    "@СелекторЭОТТС", "@ТаблЭОТТС", "@ПлюсЭОТТС", "@Прил2Настр_ЭОТТС", "@Прил2Зап_ЭОТТС",
-                    "@Прил2Разд_ЭОТТС", "@Прил4_ЭОТТС", "@МинусЭОТТС", "@НастрЭОТТС", "@VIN_ЭОТТС", "@ЧекбоксЭОТТС"]
-
-    # Ищем макросы ЭОТТС и определяем адрес площадки
-    for cmd in t_array:
-        if 'get' in cmd and tst_start == '':
-            tst_start = cmd['get']
-        if 'fnd' in cmd and cmd['fnd'] in eotts_macros:
-            retv['tsts'] = 'ЭОТТС ' + trgp
-    print('DADR', serializer_test.data.get('dadr'))
-    target_data = Target.objects.get(tname=retv['tsts'])
-    serializer_target = TargetSerializer(target_data)
-    int_ip = serializer_target.data.get('dadr') if retv['dbg'] else serializer_target.data.get('madr')
-    print('saaaaaaaaaaaaaaa', int_ip)
-
-    retv['tadr'] = int_ip + sub('(?i)^http.+?\.\d{1,3}(:8080)?/', '/', tst_start)
-
-    return retv
 
 
 def api_home(request):

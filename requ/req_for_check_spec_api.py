@@ -5,10 +5,10 @@ import requests
 """ ДЛЯ БРАУЗЕРА ССЫЛКА: http://127.0.0.1:8000/custom-response/?tst_num=165&?trg=240&?save_log=True """
 
 url = 'http://127.0.0.1:8000/custom-response/'
-params = {'tst_num': '165', 'trg': '240', 'save_log': 'True'}
+params = {'tst_num': 'testes_classes', 'trg': '240', 'save_log': 'True'}
 
 response = requests.get('http://127.0.0.1:8000/custom-response/',
-                        params={'tst_num': '165', 'trg': '240', 'save_log': 'True'})
+                        params={'tst_num': 'testes_classes', 'trg': '240', 'save_log': 'True'})
 
 print(response.status_code, response.text)
 
